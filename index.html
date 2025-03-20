@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jokenpô</title>
+</head>
+<body>
+    <h1 class="titulo">Jokenpô (Pedra, Papel e Tesoura)</h1>
+
+    <button class="button-img" onclick="jogar('Pedra')" id="pedra">
+        <img src="./Img/Pedra-emoji.png" alt="">
+    </button>
+
+    <button class="button-img" onclick="jogar('Papel')" id="papel">
+        <img src="./Img/Papel-emoji.png" alt="">
+    </button>
+
+    <button class="button-img" onclick="jogar('Tesoura')" id="tesoura">
+        <img src="./Img/Tesoura-emoji.png"  alt="">
+    </button>
+
+    <p class="js-result result"></p>
+
+    <p class="js-moves">
+        <!-- You 
+        <img src="./Img/rock-emoji.png" alt="">
+        <img src="./Img/scissors-emoji.png" alt="">
+        Computer -->
+    </p>
+
+    <p class="js-score score"></p>
+
+    <button onclick="
+    score.vitoria = 0
+    score.derrota = 0
+    score.empate = 0
+    localStorage.removeItem('score');
+    updateScore()"
+    class="reset-score-button"
+    >Resetar resultado</button>
+
+    <button class="auto-play-button" onclick="
+    autoPlay()
+    ">Auto Play</button>
+
+    <script src="index.js"></script>
+</body>
+</html>
